@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie and TV Show Search App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Movie and TV Show Search App</h1>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for a movie or TV show"
+      />
+      <select id="search-type">
+        <option value="movie">Movie</option>
+        <option value="tv">TV Show</option>
+      </select>
+      <button id="search-button">Search</button>
+    </div>
+    
+    <div id="suggestions-container"></div>
+    <div id="recent-searches-container"></div>
+    <div id="results-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
