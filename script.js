@@ -14,6 +14,7 @@ searchButton.addEventListener('click', async () => {
   const query = searchInput.value.trim();
   const type = searchType.value;
   if (query) {
+    suggestionsContainer.classList.add('hidden');
     const url = `https://api.themoviedb.org/3/search/${type}?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
     try {
       const response = await fetch(url);
@@ -31,6 +32,7 @@ searchInput.addEventListener('input', async () => {
     const query = searchInput.value.trim();
     const type = searchType.value;
     if (query) {
+        suggestionsContainer.classList.remove('hidden')
       const url = `https://api.themoviedb.org/3/search/${type}?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
       try {
         const response = await fetch(url);
@@ -40,6 +42,7 @@ searchInput.addEventListener('input', async () => {
         console.error('Error fetching data:', error);
       }
     } else {
+        suggestionsContainer.classList.add('hidden');
       suggestionsContainer.innerHTML = '';
     }
 });
